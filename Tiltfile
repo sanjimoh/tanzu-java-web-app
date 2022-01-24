@@ -1,6 +1,7 @@
+allow_k8s_contexts('arn:aws:eks:ap-south-1:314990491324:cluster/tap_demo_cluster')
 SOURCE_IMAGE = os.getenv("SOURCE_IMAGE", default='index.docker.io/sanjitun/tanzu-java-web-app-source')
 LOCAL_PATH = os.getenv("LOCAL_PATH", default='.')
-NAMESPACE = os.getenv("NAMESPACE", default='default')
+NAMESPACE = os.getenv("NAMESPACE", default='msanjit')
 
 k8s_custom_deploy(
     'tanzu-java-web-app',
